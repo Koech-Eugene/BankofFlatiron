@@ -3,7 +3,7 @@
 }
 
 .transaction td,
-#customers th {
+.transaction th {
   border: 1px solid #ddd;
   padding: 8px;
 }
