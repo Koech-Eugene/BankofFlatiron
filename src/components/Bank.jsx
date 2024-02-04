@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import TransactionList from "./TransactionList";
+import TransactionFilter from "./TransactionFilter";
 
 function Bank() {
   const [transactions, setTransactions] = useState([]);
 
-  const URL = "http://localhost:9999/transactions";
+  const URL = "http://localhost:8080/transactions";
   useEffect(() => {
     async function fetchTransactions() {
       try {
@@ -20,6 +21,12 @@ function Bank() {
     fetchTransactions();
   }, []);
 
-  return <TransactionList transactions = {transactions}/>;
+  return (
+    <>
+      <h2>Search</h2>
+      <TransactionFilter />
+      <TransactionList transactions={transactions} />
+    </>
+  );
 }
 export default Bank;

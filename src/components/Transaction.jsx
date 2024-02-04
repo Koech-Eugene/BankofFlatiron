@@ -1,13 +1,11 @@
-function Transaction(){
+function Transaction( {trans}){
 return (
-    <tbody>
-        <tr>
-          <td>Payment for food</td>
-          <td>Food</td>
-          <td>1000</td>
-          <td>1/2/2024</td>
+        <tr key={trans.key}>
+          <td>{trans.date}</td>
+          <td>{trans.description}</td>
+          <td>{trans.category}</td>
+          <td>{trans.amount}</td>
         </tr>
-        </tbody>
 )
 }
 
