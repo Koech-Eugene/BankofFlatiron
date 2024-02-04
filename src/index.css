@@ -1,0 +1,23 @@
+.transaction {
+  width: 100%;
+}
+
+.transaction td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.transaction tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.transaction tr:hover {
+  background-color: #ddd;
+}
+.transaction th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0c0e0d;
+  color: white;
+}

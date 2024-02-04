@@ -1,4 +1,10 @@
-function Bank(){
+import TransactionList from "./TransactionList";
 
+function Bank() {
+  return (
+    <div>
+      <TransactionList />
+    </div>
+  );
 }
-export default Bank
+export default Bank;

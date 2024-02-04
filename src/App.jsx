@@ -1,7 +1,11 @@
-import Bank from "./components/Bank"
+import Bank from "./components/Bank";
 
 function App() {
-  <Bank/>
+  return (
+    <div>
+      <Bank />
+    </div>
+  );
 }
 
-export default App
+export default App;
