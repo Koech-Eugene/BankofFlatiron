@@ -1,6 +1,6 @@
-function TransactionFilter() {
+function TransactionFilter({search}) {
   const handleFilter = (e) => {
-    searcht(e.target.value)
+    search(e.target.value)
   }
   return (
     <div>

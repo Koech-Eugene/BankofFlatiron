@@ -4,6 +4,8 @@ import TransactionFilter from "./TransactionFilter";
 
 function Bank() {
   const [transactions, setTransactions] = useState([]);
+  const [search, setSearch] = useState('')
+
 
   const URL = "http://localhost:8080/transactions";
   useEffect(() => {
@@ -21,11 +23,19 @@ function Bank() {
     fetchTransactions();
   }, []);
 
+
+  const filteredTransactions = transactions.filter(item=>{
+    if(search) {
+        return item.description.toLowerCase().includes(search.toLowerCase())
+    }
+    return transactions
+})
+
   return (
     <>
       <h2>Search</h2>
-      <TransactionFilter />
-      <TransactionList transactions={transactions} />
+      <TransactionFilter search={setSearch}/>
+      <TransactionList transactions={filteredTransactions} />
     </>
   );
 }
