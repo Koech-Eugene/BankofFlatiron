@@ -17,6 +17,7 @@ function TransactionList({ transactions }) {
             <Transaction trans={transactions} />
           ))}
         </tbody>
+        
       </table>
     </>
   );
